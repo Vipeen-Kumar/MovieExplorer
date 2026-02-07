@@ -1,6 +1,6 @@
 # Movie Explorer - Movie & TV Show Discovery App
 
-Movie Explorer is a modern, responsive web application built with React and Redux that allows users to explore trending movies and TV shows, search for specific titles, and view detailed information including trailers. It integrates with The Movie Database (TMDB) API to provide up-to-date entertainment data.
+Movie Explorer is a modern, responsive web application built with React and Redux that allows users to explore trending movies and TV shows, search for specific titles, and view detailed information including trailers. It features personalized recommendations, secure authentication via Auth0, and a sleek user interface powered by Tailwind CSS.
 
 ![Movie Explorer Preview](thumnail.png)
 
@@ -9,18 +9,23 @@ Movie Explorer is a modern, responsive web application built with React and Redu
 - **Trending Content**: Browse trending movies and TV shows on the home page.
 - **Detailed Information**: View detailed descriptions, ratings, popularity, and release dates for every title.
 - **Video Playback**: Watch movie and TV show trailers directly within the app.
-- **Search**: Easily find your favorite movies and TV shows using the integrated search functionality.
+- **Real-time Search Suggestions**: Dynamic autocomplete recommendations as you type, with optimized debouncing.
+- **Personalized Recommendations**: Intelligent content suggestions based on your favorite genres after signing in.
+- **Secure Authentication**: Integrated Auth0 for seamless and secure user login/signup.
+- **Genre Selection**: Choose your favorite genres to customize your discovery experience.
+- **About & Contact Pages**: Dedicated sections to learn more about the project and get in touch.
 - **Mobile Responsive**: Optimized for various screen sizes, from mobile devices to desktops.
 - **Dynamic Theming**: Beautiful UI with smooth transitions and gradients.
 
 ## Tech Stack
 
-- **Frontend**: React.js
-- **State Management**: Redux Toolkit
-- **Routing**: React Router DOM
-- **Styling**: Tailwind CSS
+- **Frontend**: React.js (v18.3.1)
+- **State Management**: Redux Toolkit (v2.2.4)
+- **Authentication**: Auth0 (@auth0/auth0-react)
+- **Routing**: React Router DOM (v6.23.1)
+- **Styling**: Tailwind CSS (v3.4.3)
 - **Icons**: React Icons
-- **Data Fetching**: Axios
+- **Data Fetching**: Axios (v1.6.8)
 - **API**: The Movie Database (TMDB)
 
 ## Getting Started
@@ -29,6 +34,7 @@ Movie Explorer is a modern, responsive web application built with React and Redu
 
 - Node.js installed on your machine.
 - A TMDB API Read Access Token. You can get one by creating an account at [themoviedb.org](https://www.themoviedb.org/).
+- An Auth0 Application (SPA) for authentication.
 
 ### Installation
 
@@ -44,9 +50,11 @@ Movie Explorer is a modern, responsive web application built with React and Redu
     ```
 
 3.  **Configure Environment Variables**:
-    Create a `.env` file in the root directory and add your TMDB Access Token:
+    Create a `.env` file in the root directory and add your TMDB and Auth0 credentials:
     ```env
     REACT_APP_ACCESS_TOKEN=your_tmdb_access_token_here
+    REACT_APP_AUTH0_DOMAIN=your_auth0_domain_here
+    REACT_APP_AUTH0_CLIENT_ID=your_auth0_client_id_here
     ```
 
 4.  **Run the application**:
