@@ -15,8 +15,9 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 const Header = () => {
     const location = useLocation()
-    const removeSpace = location?.search?.slice(3)?.split("%20")?.join(" ")
-    const [searchInput,setSearchInput] = useState(removeSpace)
+    const queryParams = new URLSearchParams(location.search)
+    const qValue = queryParams.get('q')
+    const [searchInput,setSearchInput] = useState(qValue || "")
     const navigate = useNavigate()
     const dispatch = useDispatch()
     
@@ -47,7 +48,15 @@ const Header = () => {
         }
     }, [isAuthenticated, auth0User, dispatch]);
 
-    // Suggestions state
+    // Update search input when 'q' param changes, but ignore Auth0 params
+    useEffect(() => {
+        if (qValue !== null) {
+            setSearchInput(qValue)
+        } else if (!location.pathname.includes('/search')) {
+            // Clear input if not on search page and no q param
+            setSearchInput("")
+        }
+    }, [qValue, location.pathname])
     const [suggestions, setSuggestions] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(null)
@@ -98,12 +107,6 @@ const Header = () => {
         document.addEventListener('mousedown', handleClickOutside)
         return () => document.removeEventListener('mousedown', handleClickOutside)
     }, [])
-   
-    useEffect(()=>{
-        if(removeSpace){
-            setSearchInput(removeSpace)
-        }
-    },[location])
 
     const handleSubmit = (e)=>{
         e.preventDefault()

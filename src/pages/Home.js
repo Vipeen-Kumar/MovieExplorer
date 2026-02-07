@@ -5,6 +5,7 @@ import Card from '../components/Card'
 import HorizontalScollCard from '../components/HorizontalScollCard'
 import axios from 'axios'
 import useFetch from '../hooks/useFetch'
+import Recommendations from '../components/Recommendations'
 
 const Home = () => {
   const trendingData = useSelector(state => state.movieExplorerData.bannerData)
@@ -16,6 +17,7 @@ const Home = () => {
   return (
     <div>
         <BannerHome/>
+        <Recommendations />
         <HorizontalScollCard data={trendingData} heading={"Trending"} trending={true}/>
         <HorizontalScollCard data={nowPlayingData} heading={"Now Playing"} media_type={"movie"}/>
         <HorizontalScollCard data={topRatedData} heading={"Top Rated Movies"} media_type={"movie"}/>
