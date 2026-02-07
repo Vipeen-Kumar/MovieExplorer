@@ -2,7 +2,7 @@
 
 Movie Explorer is a modern, responsive web application built with React and Redux that allows users to explore trending movies and TV shows, search for specific titles, and view detailed information including trailers. It features personalized recommendations, secure authentication via Auth0, and a sleek user interface powered by Tailwind CSS.
 
-![Movie Explorer Banner](https://github.com/user-attachments/assets/574e927c-389d-4889-a212-073c68383921)
+![Movie Explorer Banner](https://raw.githubusercontent.com/Vipeen-kumar/movieoapp/main/thumnail.png)
 
 ## Features
 
@@ -18,10 +18,10 @@ Movie Explorer is a modern, responsive web application built with React and Redu
 - **Dynamic Theming**: Beautiful UI with smooth transitions and gradients.
 
 ### Dashboard Preview
-![Trending Content](https://github.com/user-attachments/assets/f4458d34-7226-4f91-863a-7117e3725f7a)
+![Trending Content](https://raw.githubusercontent.com/Vipeen-kumar/movieoapp/main/thumnail.png)
 
 ### Mobile Experience
-![Mobile View](https://github.com/user-attachments/assets/1f94d306-3837-4632-9c36-791786f4a39b)
+![Mobile View](https://raw.githubusercontent.com/Vipeen-kumar/movieoapp/main/thumnail.png)
 
 ## Tech Stack
 
