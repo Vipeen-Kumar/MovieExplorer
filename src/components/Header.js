@@ -13,13 +13,16 @@ const Header = () => {
     const navigate = useNavigate()
    
     useEffect(()=>{
-        if(searchInput){
-            navigate(`/search?q=${searchInput}`)
+        if(removeSpace){
+            setSearchInput(removeSpace)
         }
-    },[searchInput])
+    },[location])
 
     const handleSubmit = (e)=>{
         e.preventDefault()
+        if(searchInput){
+            navigate(`/search?q=${searchInput}`)
+        }
     }
 
   return (
