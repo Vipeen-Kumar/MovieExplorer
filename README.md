@@ -63,4 +63,4 @@ Movie Explorer is a modern, responsive web application built with React and Redu
 
 ## License
 
-This project is open-source. Created by Dynamic Coding with Amit.
+This project is open-source. Created by Vipeen Kumar.
