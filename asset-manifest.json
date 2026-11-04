@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/MovieExplorer/static/css/main.43c8eb73.css",
+    "main.js": "/MovieExplorer/static/js/main.497959cc.js",
+    "static/js/453.398d4b62.chunk.js": "/MovieExplorer/static/js/453.398d4b62.chunk.js",
+    "static/media/user.png": "/MovieExplorer/static/media/user.8f67fce8772ab420a994.png",
+    "static/media/logo.png": "/MovieExplorer/static/media/logo.88b23db2e6d70f500496.png",
+    "index.html": "/MovieExplorer/index.html",
+    "main.43c8eb73.css.map": "/MovieExplorer/static/css/main.43c8eb73.css.map",
+    "main.497959cc.js.map": "/MovieExplorer/static/js/main.497959cc.js.map",
+    "453.398d4b62.chunk.js.map": "/MovieExplorer/static/js/453.398d4b62.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43c8eb73.css",
+    "static/js/main.497959cc.js"
+  ]
+}
